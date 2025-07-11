@@ -1,0 +1,63 @@
+.actionContainer {
+  position: relative;
+  top: -180px;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: #ffffff;
+  border-radius: 100px 100px 100px 100px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.waveImg {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.cardContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionCard {
+  width: 640px;
+  height: 388px;
+  background-color: #e2e2e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 90px;
+  z-index: 2;
+}
+
+.actionTitle {
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: #373737;
+}
+
+button {
+  border: none;
+  background-color: #373737;
+  width: 470px;
+  height: 108px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: #f5de21;
+}

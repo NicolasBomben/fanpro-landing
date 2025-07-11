@@ -1,0 +1,20 @@
+.headerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+    background-color:#373737;
+}
+
+.logoImg{
+    object-fit: contain;
+    height: 50%;
+}
+
+@media(max-width: 425px){
+
+    .headerContainer img{
+        width: 50%;
+    }
+}
