@@ -17,7 +17,7 @@
   grid-template-rows: repeat(7, 1fr);
   z-index: 0;
   pointer-events: none;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .gridCell {
@@ -176,48 +176,51 @@
 @media(max-width: 425px){
 
   .heroContainer {
-    height: 450px;
+    height: 100svh;
   }
 
   .gridOverlay {
-    height: 340px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr)
   }
 
 
   .asterisco {
     position: absolute;
     left: 40px;
-    top: 40px;
-    width: 150px;
+    top: 80px;
+    width: 100px;
     z-index: 1;
+    display: none;
   }
 
   .estrella {
     position: absolute;
     right: 0;
     top: 10px;
-    width: 180px;
+    width: 150px;
     z-index: 1;
+    display: none;
   }
 
   .corredor {
     position: absolute;
-    top: 80px;
-    right: 70px;
+    top: 70px;
+    right: 10px;
     z-index: 1;
-    width: 200px;
+    width: 400px;
     object-fit: contain;
   }
 
   .mainTextContainer {
     position: absolute;
-    top: 140px;
-    left: 75px;
+    top: 250px;
+    left: 40px;
     z-index: 3;
   }
 
   .mainTitle {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -270,3 +273,7 @@
     z-index: 3;
   }
 }
+
+
+
+

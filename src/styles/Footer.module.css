@@ -1,11 +1,11 @@
-.footerContainer{
-    position: relative;
-    width: 100%;
-    background-color: #F5DE21;
-    gap: 4rem;
+.footerContainer {
+  position: relative;
+  width: 100%;
+  background-color: #f5de21;
+  gap: 4rem;
 }
 
-.gridOverlay{
+.gridOverlay {
   position: absolute;
   inset: 0;
   display: grid;
@@ -14,140 +14,143 @@
   grid-template-rows: repeat(7, 1fr);
   z-index: 0;
   pointer-events: none;
-  padding: 3rem;
+  padding: 2rem;
 }
 
-.gridCell{
+.gridCell {
   border: 1px solid rgba(90, 91, 92, 0.3);
 }
 
-
-.footerTitle{
-    text-align: center;
-    font-size: 5rem;
-    color: #373737;
-    font-weight: 800;
-    padding-top: 6rem;
-    z-index: 1;
+.footerTitle {
+  text-align: center;
+  font-size: 5rem;
+  color: #373737;
+  font-weight: 800;
+  padding-top: 6rem;
+  z-index: 1;
 }
 
-.socialWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    padding-top: 4rem;
+.socialWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 4rem;
 }
 
-.socialCard{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-    width: 800px;
-    height: 190px;
-    border-radius: 80px;
-    background-color: #E2E2E1;
-    z-index: 1;
+.socialCard {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  width: 800px;
+  height: 190px;
+  border-radius: 80px;
+  background-color: #e2e2e1;
+  z-index: 1;
 }
 
-.socialText{
+.socialText {
   font-size: 3.5rem;
   font-weight: 900;
   color: #373737;
 }
 
-.icon{
+.icon {
   color: #373737;
 }
-@media(max-width: 1440px){
-  .footerTitle{
+@media (max-width: 1440px) {
+  .footerTitle {
     padding-top: 6rem;
   }
 }
 
-@media(max-width: 1024px){
-
-  .gridOverlay{
+@media (max-width: 1024px) {
+  .gridOverlay {
     padding: 1rem;
     height: 600px;
   }
 
-  .footerTitle{
+  .footerTitle {
     font-size: 3rem;
     padding-top: 3rem;
   }
 
-  .socialWrapper{
+  .socialWrapper {
     padding-top: 1rem;
   }
 
-  .socialCard{
+  .socialCard {
     width: 600px;
     height: 125px;
   }
 
-  .socialText{
+  .socialText {
     font-size: 2.5rem;
   }
 }
 
-@media(max-width: 425px){
-  .gridOverlay{
-    height: 400px;
+@media (max-width: 425px) {
+
+  .footerContainer{
+    height: 100svh;
+  }
+  
+  .gridOverlay {
+    top: -100px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
   }
 
-  .icon{
+  .icon {
     width: 30px;
     height: 30px;
   }
 
-  .socialText{
+  .socialText {
     font-size: 1rem;
   }
 
-  .socialCard{
+  .socialCard {
     width: 300px;
     height: 70px;
     gap: 1rem;
   }
 
-  .footerTitle{
+  .footerTitle {
     font-size: 1.5rem;
-    padding-top: 2.5rem;
+    padding-top: 0;
   }
 }
 
-@media(max-width: 375px){
-
-  .gridOverlay{
+@media (max-width: 375px) {
+  .gridOverlay {
     height: 350px;
   }
 
-  .icon{
+  .icon {
     width: 30px;
     height: 30px;
   }
 
-  .socialText{
+  .socialText {
     font-size: 0.8rem;
   }
 
-  .socialCard{
+  .socialCard {
     width: 300px;
     height: 60px;
     gap: 1rem;
   }
 
-  .footerTitle{
+  .footerTitle {
     font-size: 1rem;
   }
-
 }
 
 @media (max-width: 320px) {
-   .socialCard{
+  .socialCard {
     width: 260px;
     height: 60px;
     gap: 1rem;

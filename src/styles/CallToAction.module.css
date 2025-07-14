@@ -22,7 +22,7 @@
   z-index: 0;
 }
 
-.cardContainer{
+.cardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,4 +60,38 @@ a {
   font-weight: bold;
   font-size: 3.5rem;
   color: #f5de21;
+}
+
+@media (max-width: 425px) {
+  .actionContainer {
+    flex-direction: column;
+    border-radius: 50px;
+    gap: 4rem;
+  }
+  .actionCard {
+    width: 375px;
+    height: 280px;
+    border-radius: 50px;
+  }
+
+  .actionTitle {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #373737;
+  }
+
+  .waveImg {
+    top: 400px;
+  }
+
+  button {
+    width: 280px;
+    height: 90px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
 }
