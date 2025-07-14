@@ -1,5 +1,5 @@
 import styles from '../styles/Header.module.css';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/logo-fanpro.svg';
 
 
 export const Header = () => {

@@ -7,15 +7,14 @@ export const Layout = () => {
   return (
     <>
       <header>
-        <Header/>
+        <Header />
       </header>
       <main>
-        <Hero/>
-        <CallToAction/>
+        <Hero />
+        <CallToAction />
       </main>
-      <footer>
-        <Footer/>
-      </footer>
+
+      <Footer />
     </>
   );
 };

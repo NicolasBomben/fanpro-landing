@@ -1,15 +1,15 @@
 .actionContainer {
   position: relative;
-  top: -180px;
   width: 100%;
-  height: 900px;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8rem;
   background-color: #ffffff;
   border-radius: 100px 100px 100px 100px;
-  z-index: 1;
+  z-index: 10;
+  margin-top: -150px;
   overflow: hidden;
 }
 
@@ -62,22 +62,63 @@ a {
   color: #f5de21;
 }
 
+@media (max-width: 1024px) {
+  .actionContainer {
+    gap: 2rem;
+  }
+
+  .actionCard {
+    width: 450px;
+    border-radius: 60px;
+  }
+
+  .actionTitle {
+    font-size: 2rem;
+  }
+
+  .waveImg {
+    top: 500px;
+  }
+
+  button {
+    width: 350px;
+    border-radius: 50px;
+  }
+
+  a {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .actionCard {
+    width: 350px;
+  }
+
+  button{
+    width: 300px;
+  }
+
+  a{
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 425px) {
   .actionContainer {
     flex-direction: column;
-    border-radius: 50px;
+    border-radius: 40px;
     gap: 4rem;
   }
   .actionCard {
     width: 375px;
     height: 280px;
-    border-radius: 50px;
+    border-radius: 40px;
   }
 
   .actionTitle {
     font-weight: 500;
     font-size: 1.8rem;
-    color: #373737;
   }
 
   .waveImg {
@@ -86,12 +127,32 @@ a {
 
   button {
     width: 280px;
-    height: 90px;
+    height: 80px;
     border-radius: 30px;
-    cursor: pointer;
   }
 
   a {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .actionCard {
+    width: 350px;
+    height: 240px;
+    border-radius: 30px;
+  }
+
+  button {
+    width: 280px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 320px) {
+  .actionCard {
+    width: 300px;
   }
 }

@@ -10,7 +10,7 @@ export const Footer = () => {
   const cells = Array.from({ length: totalCells });
 
   return (
-    <section className={styles.footerContainer}>
+    <footer className={styles.footerContainer}>
       <Container>
         {/* div que recrea la celda de fondo */}
         <div className={styles.gridOverlay}>
@@ -36,6 +36,6 @@ export const Footer = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </footer>
   );
 };
