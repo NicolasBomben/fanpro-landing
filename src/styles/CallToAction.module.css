@@ -7,7 +7,7 @@
   align-items: center;
   gap: 8rem;
   background-color: #ffffff;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 100px;
   z-index: 10;
   margin-top: -150px;
   overflow: hidden;
