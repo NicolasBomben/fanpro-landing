@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-html, body{
+body{
   font-family: 'Montserrat', sans-serif;
   background-color: #f5de21;
-  overflow-x: clip;
 }
