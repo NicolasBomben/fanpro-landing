@@ -1,4 +1,5 @@
 import { Container } from "./Container/Container";
+import SplitText from "../animations/TextAnimations/SplitText/SplitText";
 import styles from "../styles/Hero.module.css";
 import AsteriscoBackGround from "../../assets/asterisco.png";
 import EstrellaBackGround from "../../assets/estrella.png";
@@ -29,7 +30,31 @@ export const Hero = () => {
         <img src={CorredorBackGround} className={styles.corredor} alt="" />
 
         <div className={styles.mainTextContainer}>
-          <h1 className={styles.mainTitle}>TODO <br/> CONECTADO</h1>
+          <h1 className={styles.mainTitle}>
+            <SplitText
+              text="TODO"
+              className={styles.mainTitle}
+              delay={130}
+              duration={2}
+              splitType="chars"
+              ease="power3.out"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+            />
+            <br />
+            <SplitText
+              text="CONECTADO"
+              className={styles.mainTitle}
+              delay={130}
+              duration={2}
+              splitType="chars"
+              ease="power3.out"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+            />
+          </h1>
         </div>
       </Container>
     </section>
