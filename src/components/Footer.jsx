@@ -18,7 +18,7 @@ export const Footer = () => {
           duration={2}
           ease="power3.out"
           threshold={0.1}
-          delay={0.6}
+          delay={0.4}
         >
           <div className={styles.socialWrapper}>
             <div className={styles.socialCard}>

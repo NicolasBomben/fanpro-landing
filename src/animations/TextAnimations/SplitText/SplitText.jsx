@@ -22,6 +22,7 @@ const SplitText = ({
   rootMargin = "-100px",
   textAlign = "center",
   onLetterAnimationComplete,
+  useScrollTrigger = true, // New prop to control scroll trigger
 }) => {
   const ref = useRef(null);
   const animationCompletedRef = useRef(false);
@@ -84,27 +85,43 @@ const SplitText = ({
         : `+=${marginValue}${marginUnit}`;
     const start = `top ${startPct}%${sign}`;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: el,
-        start,
-        toggleActions: "play none none none",
-        once: true,
-        onToggle: (self) => {
-          scrollTriggerRef.current = self;
+    let tl;
+    if (useScrollTrigger) {
+      tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start,
+          toggleActions: "play none none none",
+          once: true,
+          onToggle: (self) => {
+            scrollTriggerRef.current = self;
+          },
         },
-      },
-      smoothChildTiming: true,
-      onComplete: () => {
-        animationCompletedRef.current = true;
-        gsap.set(targets, {
-          ...to,
-          clearProps: "willChange",
-          immediateRender: true,
-        });
-        onLetterAnimationComplete?.();
-      },
-    });
+        smoothChildTiming: true,
+        onComplete: () => {
+          animationCompletedRef.current = true;
+          gsap.set(targets, {
+            ...to,
+            clearProps: "willChange",
+            immediateRender: true,
+          });
+          onLetterAnimationComplete?.();
+        },
+      });
+    } else {
+      tl = gsap.timeline({
+        smoothChildTiming: true,
+        onComplete: () => {
+          animationCompletedRef.current = true;
+          gsap.set(targets, {
+            ...to,
+            clearProps: "willChange",
+            immediateRender: true,
+          });
+          onLetterAnimationComplete?.();
+        },
+      });
+    }
 
     tl.set(targets, { ...from, immediateRender: false, force3D: true });
     tl.to(targets, {
@@ -137,6 +154,7 @@ const SplitText = ({
     threshold,
     rootMargin,
     onLetterAnimationComplete,
+    useScrollTrigger
   ]);
 
   return (

@@ -41,6 +41,7 @@ export const Hero = () => {
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
+              useScrollTrigger={false} 
             />
             <br />
             <SplitText
@@ -53,6 +54,7 @@ export const Hero = () => {
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
+              useScrollTrigger={false} 
             />
           </h1>
         </div>
