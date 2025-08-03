@@ -47,7 +47,7 @@ export const Footer = () => {
                 className={styles.socialText}
                 href="https://www.tiktok.com/@fanprook"
               >
-                fanpro.oficial
+                fanprook
               </a>
             </div>
           </div>
